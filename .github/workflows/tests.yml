@@ -11,6 +11,17 @@ jobs:
     steps:
       - name: 📥 Checkout do código
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # necessário para comparar histórico
+
+      - name: 🔒 Verificar alterações nos testes
+        run: |
+          CHANGED_TESTS=$(git diff --name-only HEAD~1 | grep '^tests/' || true)
+          if [ ! -z "$CHANGED_TESTS" ]; then
+            echo "❌ Não é permitido alterar os testes!"
+            echo "$CHANGED_TESTS"
+            exit 1
+          fi
 
       - name: 🐍 Configurar Python
         uses: actions/setup-python@v4

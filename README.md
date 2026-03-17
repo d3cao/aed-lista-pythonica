@@ -413,6 +413,8 @@ True
 - Leia os testes com atenção — eles definem o comportamento esperado
 - Pequenos erros de lógica podem quebrar vários testes
 - Pense sempre em: entrada → processamento → saída
+- Não é permitido alterar os arquivos em `tests/`
+- Alterações nos testes irão reprovar automaticamente no CI
 
 📚 Referência
 
