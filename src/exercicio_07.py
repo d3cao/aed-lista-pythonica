@@ -19,4 +19,4 @@ def calculate_eight() -> list[str]:
     Returns:
         list[str]: lista de expressões matemáticas
     """
-    pass
+    return ["4 + 4", "12 - 4", "4 * 2", "32 / 4"]
