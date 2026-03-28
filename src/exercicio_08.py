@@ -9,4 +9,3 @@ def favorite_number(n: int) -> str:
         str: "Your favorite number is <n>"
     """
     return f"Your favorite number is {n}"
-
